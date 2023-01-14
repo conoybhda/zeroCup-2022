@@ -1,0 +1,145 @@
+*{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+}
+.rotate{
+    position: absolute;
+    left: -512px;
+    top: -512px;
+    transform: rotate(22.5deg);
+    transition: 0.4s;
+    overflow: hidden;
+}
+.rotate:hover{
+    cursor: pointer;
+}
+.page{
+    position: absolute;
+    top: 800px;
+    left: 50px;
+    width: 500px;
+    height: 200px;
+}
+.timeline{
+    position: absolute;
+    width: 100vw;
+    left: -1920px;
+    top: 92%;
+    transition: 0.4s;
+}
+.contents{
+    width: 200px;
+    height: 100px;
+    margin-right: 35px;
+    opacity: 0;
+    transition: 0.4s;
+}
+.time{
+    color: green;
+}
+.title{
+    color: rgb(255, 155, 0);
+}
+.story{
+    color: green;
+}
+.content{
+    width: 100%;
+    flex-direction: row;
+    position: absolute;
+    top: 83%;
+    left: 1vw;
+}
+.picture{
+    position: absolute;
+    left: 650px;
+    top: 20px;
+    width: 60%;
+    height: 74%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: green;
+    overflow: hidden;
+    background-image: url("resources/background.jpg");
+}
+.pictures{
+    position: absolute;
+    opacity: 0;
+    transition: 0.4s;
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+}
+.first{
+    width: 30vw;
+    height: 350px;
+    z-index: 10;
+    position: absolute;
+    left: 34%;
+    top: 27%;
+    background-color: black;
+    border-width: 10px;
+    border-style: solid;
+    border-color: green;
+}
+.first_title{
+    color: rgb(255, 155, 0);
+    position: absolute;
+    top: 80px;
+    left: 150px;
+    margin: auto;
+}
+.reminds{
+    color: green;
+    position: absolute;
+    top: 130px;
+    left: 150px;
+}
+#aaa{
+    color: white;
+    position: absolute;
+    top: 130px;
+    left: 260px;
+    color: green;
+}
+#bbb{
+    display: none;
+    position: absolute;
+}
+.last{
+    display: none;
+}
+.login{
+    color: rgb(255, 155, 0);
+    position: absolute;
+    top: 160px;
+    left: 150px;
+    opacity: 0;
+    transition: 0.4s;
+    text-decoration: underline;
+}
+.login:hover{
+    cursor: pointer;
+}
+.addition{
+    color: rgb(255, 155, 0);
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+.coderain{
+    position: absolute;
+    z-index: 5;
+}
+.content,.timeline,.picture,.rotate{
+    display: none;
+}

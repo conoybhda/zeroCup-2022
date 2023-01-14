@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>穿过逆境，抵达繁星</title>
+    <link rel="stylesheet" href="./game.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="first">
+            <div class="scene">
+                <div class="wrap">
+                    <div class="wall wall-right"></div>
+                    <div class="wall wall-left"></div>   
+                    <div class="wall wall-top"></div>
+                    <div class="wall wall-bottom"></div> 
+                    <div class="wall wall-back"></div>    
+                </div>
+                <div class="wrap">
+                    <div class="wall wall-right"></div>
+                    <div class="wall wall-left"></div>   
+                    <div class="wall wall-top"></div>
+                    <div class="wall wall-bottom"></div>   
+                    <div class="wall wall-back"></div>    
+                </div>
+              </div>              
+        </div>
+        <div class="stars">
+            <img class="star1" src="resources\star.png">
+            <img class="star2" src="resources\star.png">
+            <img class="star3" src="resources\star.png">
+            <img class="star4" src="resources\star.png">
+            <img class="star5" src="resources\star.png">
+        </div>
+        <div class="contents">
+            <div class="content">一共五道题目</div>
+            <div class="content">只有答对题目才可以点亮题目对应的星星哦</div>
+        </div>
+        <div class="countdown">
+            <div class="circle" id="circle0"></div>
+            <div class="box">
+                <div class="leftbox">
+                    <div class="circle" id="circle2"></div>
+                </div>
+                <div class="rightbox">
+                    <div class="circle" id="circle1"></div>
+                </div>
+            </div>
+            <div class="number">4</div>
+        </div>
+        <div class="problems">
+            <div class="no1">
+                <div class="title">第一题</div>
+                <div class="problem">中国航天日是每年的</div>
+                <button class="trueoption">4月24日</button>
+                <button class="falseoption">4月23日</button>
+            </div>
+            <div class="no2">
+                <div class="title">第二题</div>
+                <div class="problem">在火星上首次留下中国印记的是</div>
+                <button class="trueoption">天问一号</button>
+                <button class="falseoption">萤火一号</button>
+            </div>
+            <div class="no3">
+                <div class="title">第三题</div>
+                <div class="problem">中国首颗太阳探测卫星</div>
+                <button class="trueoption">羲和号</button>
+                <button class="falseoption">祝融号</button>
+            </div>
+            <div class="no4">
+                <div class="title">第四题</div>
+                <div class="problem">中国首个低纬度发射场是</div>
+                <button class="trueoption">海南文昌</button>
+                <button class="falseoption">甘肃酒泉</button>
+            </div>
+            <div class="no5">
+                <div class="title">第五题</div>
+                <div class="problem">拉丁谚语Per aspera ad astra的意思是</div>
+                <button class="trueoption">穿过逆境，抵达繁星</button>
+                <button class="falseoption">我是大明星</button>
+            </div>
+            <div class="conguatulate">
+                <div class="conguatulation">恭喜你，通过了所有题目！</div>
+                <button class="answers">点击查看「题目解析」</button>
+            </div>
+        </div>
+        <img class="follower" src="resources\planet.png">
+    </div>
+</body>

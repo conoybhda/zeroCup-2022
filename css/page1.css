@@ -1,0 +1,53 @@
+/*别忘了字体*/
+
+#displayout{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    /*这里可以改渐入渐出快慢*/
+    transition: 1s;
+    opacity: 0;
+    z-index: 10;
+}
+#output{
+    position: absolute;
+    display:flex;
+    /*这里改字体位置*/
+    right: 10vw;
+    top: 20vh;
+    font-size:54px;
+}
+#inputtext{
+    margin:auto;
+    width:70%;
+    outline:none;
+    padding:10px;
+}
+#inputarea{
+    margin:auto;
+    width:40%;
+}
+.letters{
+    z-index: 10;
+    margin:10px;
+    font-family: "Olympics";
+    /*这里记得改字体大小*/
+    font-size: 256px;
+    color: rgb(255, 255, 255);
+}
+.decoration{
+    z-index: 1;
+    position: absolute;
+    right: 12vw;
+    top: 20vh;
+}
+@keyframes flyin{
+    from{
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,329 @@
+@font-face {
+    font-family: "Olympics";
+    src: url("resources/锐字奥运精神夺冠简免费.ttf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --path-width: 40px;
+    --path-height: 40px;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.contents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 400%;
+    opacity: 0;
+    transition: 2s;
+}
+.content{
+    color: white;
+    font-family: "Olympics";
+    font-size: 32px;
+}
+.countdown{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+.circle{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 290px;
+    border-style: solid;
+    border-width: 40px;
+}
+#circle0{
+    border-color: white;
+}
+#circle1,#circle2{
+    border-color: deepskyblue;
+}
+#circle1{
+    border-left: 40px solid transparent;
+    border-bottom: 40px solid transparent;
+    transition: 1s;
+    transform: rotate(45deg);
+    position: absolute;
+    left: -250px;
+    top: 40px;
+}
+#circle2{
+    border-right: 40px solid transparent;
+    border-top: 40px solid transparent;
+    transition: 1s;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.box{
+    width: 580px;
+    height: 580px;
+    display: flex;
+    flex-direction: row;
+}
+.leftbox,.rightbox{
+    width: 290px;
+    height: 580px;
+    overflow: hidden;
+    position: absolute;
+}
+.rightbox{
+    left: 290px;
+}
+.number{
+    color: white;
+    font-family: "Olympics";
+    font-size: 256px;
+    position: absolute;
+}
+.problems{
+    position: absolute;
+    opacity: 1;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 700px;
+    border-radius: 40px;
+    transition: 0.2s;
+    border-style: solid;
+    border-color: white;
+    border-width: 10px;
+    background-color: rgb(19, 20, 28);
+}
+.no1,.no2,.no3,.no4,.no5{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 300%;
+    position: absolute;
+}
+.no2,.no3,.no4,.no5{
+    display: none;
+}
+.title{
+    color: white;
+    font-family: "Olympics";
+    font-size: 32px;
+}
+.problem{
+    color: white;
+    font-family: "Olympics";
+    font-size: 20px;
+}
+.trueoption,.falseoption,.answers{
+    width: 400px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: rgb(54,81,108);
+    color: white;
+    font-family: "Olympics";
+    font-size: 24px;
+    margin: 10px 0;
+    transition: 0.2s;
+}
+.trueoption:hover,.falseoption:hover,.answers:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+.conguatulation{
+    font-family: "Olympics";
+    font-size: 32px;
+    color: white;
+}
+.conguatulate{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.stars{
+    position: absolute;
+    top: 0px;
+    transition: 0.4s;
+}
+
+@keyframes shake{
+    0% {
+        transform: rotate(0deg);
+    }
+    5% {
+        transform: rotate(5deg);
+    }
+    10% {
+        transform: rotate(0deg);
+    }
+    15% {
+        transform: rotate(-5deg);
+    }
+    20% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    30% {
+        transform: rotate(0deg);
+    }
+    35% {
+        transform: rotate(-5deg);
+    }
+    40% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.star1,.star2,.star3,.star4,.star5{
+    transition: 0.4s;
+}
+
+.videos{
+    animation: zoomIn 357s;
+    position: absolute;
+}
+
+@keyframes zoomIn {
+    0%{
+        clip-path: circle(2px);
+    }
+    100%{
+        clip-path: circle(160000px);
+    }
+}
+
+.follower{
+    position: absolute;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.wall{
+    background: url("resources/gameBackground.jpg");
+    background-size: cover;
+  }
+  
+ .first{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+    position: absolute;
+    z-index: -1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .first:before{
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+  
+  .scene{
+    display: inline-block;
+    vertical-align: middle;
+    perspective: 10px;
+    perspective-origin: 50% 50%;
+    position: absolute;
+  }
+  
+  .wrap{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    left: -500px;
+    top: -500px;
+    transform-style: preserve-3d;
+    animation: move 12s infinite linear;
+    animation-fill-mode: forwards;
+    
+  }
+  
+  .wrap:nth-child(2){
+    animation: move 12s infinite linear;
+    animation-delay: 6s;
+  }
+  
+  .wall {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    animation: fade 12s infinite linear;
+    animation-delay: 0;
+  }
+  
+  .wrap:nth-child(2) .wall {
+    animation-delay: 6s;
+  }
+  
+  .wall-right {
+    transform: rotateY(90deg) translateZ(500px);
+  }
+  
+  .wall-left {
+    transform: rotateY(-90deg) translateZ(500px);
+  }
+  
+  .wall-top {
+    transform: rotateX(90deg) translateZ(500px);
+  }
+  
+  .wall-bottom {
+    transform: rotateX(-90deg) translateZ(500px);
+  }
+  
+  .wall-back {
+    transform: rotateX(180deg) translateZ(500px);
+  }
+  
+  @keyframes move {
+    0%{
+      transform: translateZ(-500px) rotate(0deg);
+    }
+    100%{
+      transform: translateZ(500px) rotate(0deg);
+    }
+  }
+  
+  @keyframes fade {
+    0%{
+      opacity: 0;
+    }
+    25% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }

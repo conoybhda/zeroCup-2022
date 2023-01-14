@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <!--为测试用-->
+    <!--写在头部的meta标签，分别规定字符集，关键词，手机浏览器适配，作者，网页描述-->
+    <meta charset="UTF-8"  />
+    <meta name="keywords" content="宇宙,太空,航天,中国航天,神舟飞船,神舟十三号,航天员,中国故事" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="author" content="YuanBoHan,SunAo" />
+    <meta name="description" content="介绍新中国航空航天成就和航空航天知识，为大家揭开中国航天的面纱，展示伟大的中国载人航天精神" />
+    <title>太空之眼</title>
+    <!--关联js和css文件-->
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/loading.css" />
+    <link rel="stylesheet" href="./css/page3.css" />
+    <link rel="stylesheet" href="./css/page5.css"/>
+    <link rel="stylesheet" href="./css/page4.css"/>
+    <link rel="stylesheet" href="./css/page6.css"/>
+    <link rel="stylesheet" href="./css/page1.css"/>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/lodash.js"></script>
+    <script src="./js/listener.js"></script>
+</head>
+
+<body>
+    <!--整个网页页面-->
+    <div class="page0">
+        <!--标题“太空之眼”-->
+        <div class="load">
+            <div class="loading">
+                加载中,请稍后<span class="loader"><span class="loader-inner"></span></span>
+            </div>
+            <div class="but">点击以继续</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <canvas id="canvas" width="512px" height="512px"></canvas>
+        <div id="page1">
+            <div id='displayout'>
+                <div id='output'></div>
+            </div>
+            <img class="decoration" src="resources\decoration.png">
+        </div>
+
+        <div id="page2">
+            <!--页面的文字内容-->
+            <div class="articlelist">
+                <!--每一行内容-->
+                <div onmouseenter="change_img('./resources/huojian.png')" class="listitem" id="item1" href="">
+                    <!--"readmore"-->
+
+                    <!--时间和内容-->
+                    <span class="listitemDate">2021-10-16</span>
+                    <h1 class="listitemTitle">神舟十三号在酒泉卫星发射中心升空。</h1>
+                </div>
+                <div class="dividing"></div>
+                <div onmouseenter="change_img('./resources/spaceship.png')" class="listitem" id="item2" href="">
+                    <!--"readmore"-->
+                    <span class="listitemDate">2021-10-16</span>
+                    <h1 class="listitemTitle">神舟十三号与天和核心舱成功对接。</h1>
+                </div>
+                <div class="dividing"></div>
+                <div onmouseenter="change_img('./resources/yuhangyuan.png')" class="listitem" id="item3" href="">
+                    <!--"readmore"-->
+                    <span class="listitemDate">2021-11-7</span>
+                    <h1 class="listitemTitle">
+                        神舟十三号航天员乘组执行第一次出舱活动。
+                    </h1>
+                </div>
+                <div class="dividing"></div>
+                <div onmouseenter="change_img('./resources/shiyan.png')" class="listitem" id="item4" href="">
+                    <!--"readmore"-->
+                    <span class="listitemDate">2022-3-13</span>
+                    <h1 class="listitemTitle">
+                        航天员乘组完成国际首次皮肤干细胞失重悬浮培养实验。
+                    </h1>
+                </div>
+                <div class="dividing"></div>
+                <div onmouseenter="change_img('./resources/jiaoyu.png')" class="listitem" id="item5" href="">
+                    <!--"readmore"-->
+                    <span class="listitemDate">2022-3-23</span>
+                    <h1 class="listitemTitle">“天宫课堂”第二课在中国空间站开讲。</h1>
+                </div>
+                <div class="dividing"></div>
+                <div onmouseenter="change_img('./resources/fanhuicang.png')" class="listitem" id="item6" href="">
+                    <!--"readmore"-->
+                    <span class="listitemDate">2022-4-26</span>
+                    <h1 class="listitemTitle">
+                        航天员乘组成功返回，神十三载人飞行任务圆满成功。
+                    </h1>
+                </div>
+            </div>
+            <!--粒子特效动画-->
+
+        </div>
+
+        <div id="page3">
+            <!--航天人物列表-->
+            <div class="heroes">
+                <div class="hero">
+                    <div class="herotext">
+                        <div class="heroname">王亚平</div>
+                        <div class="herostory">
+                            王亚平，女，汉族，籍贯山东烟台，中共党员，1980年1月出生，1997年8月入伍，2000年5月入党，北京大学新闻与传播学院毕业，硕士学位，在北京大学心理学院攻读博士学位，大校军衔。曾任空军航空兵某师某团副大队长，安全飞行1567小时，被评为空军二级飞行员。现为中国人民解放军航天员大队特级航天员，中共二十大代表，第十三届全国人大代表，第十三届全国青联副主席，中国航天公益形象大使。
+                        </div>
+                    </div>
+                    <img class="heropic" src="resources\wyp.png">
+                </div>
+                <div class="hero">
+                    <div class="herotext">
+                        <div class="heroname">翟志刚</div>
+                        <div class="herostory">
+                            曾任空军某中心飞行教员，安全飞行950小时，被评为空军一级飞行员。2003年9月，入选神舟五号飞行任务备份航天员。2005年6月，入选神舟六号飞行任务备份乘组。2008年9月，执行神舟七号飞行任务并担任指令长，同年11月，被中共中央、国务院、中央军委授予“航天英雄”荣誉称号，并获“航天功勋奖章”。2013年1月，入选神舟十号飞行任务备份航天员。2019年12月，入选神舟十三号飞行任务乘组并担任指令长。
+                        </div>
+                    </div>
+                    <img class="heropic" src="resources\zzg.png">
+                </div>
+                <div class="hero">
+                    <div class="herotext">
+                        <div class="heroname">叶光富</div>
+                        <div class="herostory">
+                            叶光富，男，汉族，籍贯四川成都，中共党员，硕士学位。1980年9月出生，1998年8月入伍，2002年5月入党，毕业于西安交通大学，现为中国人民解放军航天员大队二级航天员，大校军衔。
+                            曾任空军航空兵某师某团司令部作战训练股空战射击主任，安全飞行1100小时，被评为空军一级飞行员。2010年5月，入选我国第二批航天员。2019年12月，入选神舟十三号飞行任务乘组。
+                        </div>
+                    </div>
+                    <img class="heropic" src="resources\ygf.png">
+                </div>
+            </div>
+            <!--左箭头按钮-->
+            <img class="leftarrow" src="resources/leftarrow.png">
+            <!--右箭头按钮-->
+            <img class="rightarrow" src="resources/rightarrow.png">
+        </div>
+
+        <div id="page4">
+            <div class="controller">
+                <div class="earth" title="地球"></div>
+                <div class="ring1" title="神舟十三号轨道"></div>
+                <div class="ring2" title="梦天实验舱轨道"></div>
+                <div class="ring3" title="东方红一号轨道"></div>
+                <div class="ring4" style="display: none;"></div>
+            </div>
+            <ul class="menu">
+                <li class="menuitem gray">①</li>
+                <li class="menuitem yellow">②</li>
+                <li class="menuitem blue">③</li>
+            </ul>
+            <div class="introduce">
+                <div class="intro1">
+                    <div class="introhead">神舟十三号轨道</div>
+                    <div class="introtext">发射时间：2021年10月16日0时23分</div>
+                    <div class="introtext">在轨天数：183天</div>
+                    <div class="introtext">发射地点：酒泉卫星发射中心</div>
+                    <div class="introtext">轨道高度：近地高度200公里,远地高度356公里</div>
+                    <div class="introvideo">
+                        <img class="introv1" src="resources\introvideo.png">
+                    </div>
+                </div>
+                <div class="intro2">
+                    <div class="introhead">梦天实验舱轨道</div>
+                    <div class="introtext">发射时间：2022年10月31日15时37分</div>
+                    <div class="introtext">在轨天数：暂无</div>
+                    <div class="introtext">发射地点：文昌航天发射场</div>
+                    <div class="introtext">轨道高度：近心高度352公里，远心高度485公里</div>
+                    <div class="introvideo"></div>
+                    <div class="introvideo">
+                        <img class="introv2" src="resources\introvideo.png">
+                    </div>
+                </div>  
+                <div class="intro3">
+                    <div class="introhead">东方红一号轨道</div>
+                    <div class="introtext">发射时间：1970年4月24日21时35分</div>
+                    <div class="introtext">在轨天数：暂无</div>
+                    <div class="introtext">发射地点：酒泉卫星发射中心</div>
+                    <div class="introtext">轨道高度：近地高度428公里，远地高度2030公里</div>
+                    <div class="introvideo"></div>
+                    <div class="introvideo">
+                        <img class="introv3" src="resources\introvideo.png">
+                    </div>
+                </div>
+                <div class="intro4"></div>
+            </div>
+            <div class="displayvideo">
+               <video class="realvideo" src="" controls></video>
+               <img class="closevideo" src="./resources/closevideobutton.png">
+            </div>  
+        </div>
+
+        <div id="page5">
+            <div class="knowledge">
+                <!--毛玻璃效果的选项-->
+                <div class="playgame">
+                    <svg width="150" height="150" class="playgamesvg">
+                        <polygon points="100,25 140,50 140,90 100,115 60,90 60,50" style="fill: rgba(255, 255, 255, 0.5)" onclick="history()"></polygon>
+                        <text x="68" y="70">航天历史</text>
+                        <text x="83" y="90">征程</text>
+                    </svg>
+                </div>
+                <div class="knowhistory">
+                    <svg width="150" height="150" class="knowhistorysvg">
+                        <polygon points="100,25 140,50 140,90 100,115 60,90 60,50" style="fill: rgba(255, 255, 255, 0.5)" onclick="game()"></polygon>
+                        <text x="68" y="70">航天知识</text>
+                        <text x="83" y="90">问答</text>
+                    </svg>
+                </div>
+                <img class="separate" src="resources\separate.png">
+                <img class="backpic1" src="resources\knowhistoryback.png">
+                <img class="backpic2" src="resources\playgameback.png">
+            </div>
+        </div>
+
+        <div id="page6">
+            <div class="conclude">
+                <img class="page6pic" src="resources\ciyun.png"> 
+            </div>
+            <div class="conclusion">我们的创新永不停歇、探索永不止步。脚踏实地，在不懈追求航天梦的道路上，中国人探索太空的脚步将迈得更稳更远。</div>
+        </div>
+        <div class="backpage">
+            <!--鼠标周围的圈-->
+            <div id="pointRound"></div>
+            <div class="sidebar">
+                <li><a class="side sideactive" href="#page1">首页</a></li>
+                <li><a class="side" href="#page2">历程</a></li>
+                <li><a class="side" href="#page3">人物</a></li>
+                <li><a class="side" href="#page4">课堂</a></li>
+                <li><a class="side" href="#page5">知识</a></li>
+                <li><a class="side" href="#page6">结语</a></li>
+            </div>
+            <div id="showPage">
+                <p>
+                <div id="changePage">
+                    <div class="nowPage">/01</div>
+                </div>/06</p>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/CarouselChart.js"></script>
+    <script src="./js/fuction.js"></script>
+    <script src="./js/canvas.js" type="text/javaScript"></script>
+    
+
+
+    <script>
+        $(window).on("load", () => {
+            func(".loading", ".but", '-=20px');
+            setTimeout(function () {
+                $(".page0").click(function () {
+                    $(this).fadeOut("slow");
+                    $(".container").fadeIn("slow");
+                    titleappear()
+                });
+            }, 1000);
+        });
+        function history(){
+            window.open('./history/timeline.html')
+        }
+        function game(){
+            window.open('./game/game.html')
+        }
+    </script>
+</body>
+
+</html>

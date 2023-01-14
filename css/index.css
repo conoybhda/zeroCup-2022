@@ -1,0 +1,222 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  cursor: url(../resources/point.png) 3 3, default;
+}
+
+
+
+#pointRound {
+  position: fixed;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.container {
+  /*100%窗口宽度和高度*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  /*设置滚动贴合*/
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  min-width: 1280px;
+  min-height: 720px;
+}
+
+.sidebar {
+  position: fixed;
+  right: 3vw;
+  top: 15vh;
+  z-index: 100;
+}
+
+.side{
+  text-decoration: none;
+  transition: margin 0.3s, color 0.3s;
+}
+
+.sidebar li{
+  list-style-type: none;
+}
+
+.sidebar li a{
+  padding: 1.8rem 0;
+  display: block;
+  font-size: 16px;
+}
+
+/* .side::after {
+  content: "";
+  display: none;
+  width: 2px;
+  height: 100%;
+  border-left: 4px solid #22bbff;
+  top: 0;
+  right: 0;
+  position: absolute;
+} */
+
+.side:hover {
+  color: #22bbff;
+  margin-left: -1em;
+}
+
+.sideactive:hover{
+  margin-left: -2em;
+}
+
+#showPage {
+  position: fixed;
+  bottom: 3.5vh;
+  right: 5vw;
+}
+
+.nowPage {
+  position: fixed;
+  bottom: 3.5vh;
+  right: calc(26px + 5vw);
+  opacity: 1;
+}
+
+.prevPage {
+  position: fixed;
+  bottom: calc(3.5vh - 20px);
+  right: calc(26px + 5vw);
+  opacity: 0;
+}
+
+.nextPage {
+  position: fixed;
+  bottom: calc(3.5vh + 20px);
+  right: calc(26px + 5vw);
+  opacity: 0;
+}
+
+#page1,
+#page2,
+#page3,
+#page4,
+#page5,
+#page6 {
+  width: 100vw;
+  height: 100vh;
+  /*设置下一页内容滚动贴合到顶部*/
+  scroll-snap-align: start;
+}
+
+.p1 {
+  position: absolute;
+  top: 60vh;
+  left: 80vw;
+  height: 4px;
+  border-radius: 2px;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 251, 251, 0.454)
+  );
+  width: 0;
+  transform: rotate(75deg);
+}
+
+.line1,
+.line2,
+.line3,
+.line4 {
+  position: absolute;
+  top: 60vh;
+  left: 80vw;
+  height: 4px;
+  border-radius: 2px;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 1),
+    rgba(255, 251, 251, 0.454)
+  );
+  width: 0;
+}
+
+.listitem::before {
+  content: "Learn More";
+  display: inline-block;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-align: right;
+  color: #000;
+  font-family: "Bender";
+  background-color: #22bbff;
+  margin-right: 0;
+  padding: 5px 0px;
+  transition: width 0.5s, margin-right 0.3s, padding 0.3s;
+  white-space: nowrap;
+  width: 0;
+  box-sizing: content-box;
+  overflow: hidden;
+}
+.listitem:hover::before{
+  width: 8em;
+margin-right: 2em;
+padding: 5px 7px;
+}
+
+.listitem{
+  width: 50vw;
+  height: 10vh;
+}
+.dividing{
+  width: 50vw;
+  height: 2px;
+  background-image: linear-gradient(to right,white,rgb(18, 18, 18))
+}
+
+.sideactive{
+  color: #22bbff;
+  overflow: show ;
+  transition: margin 0.3s ;
+}
+
+.sideactive::after{
+  content: "";
+  width: 0px;
+  height: 100%;
+  border-left: 4px solid #22bbff;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+
+#canvas{
+  position: absolute;
+  /* pointer-events: none; */
+  top: 110vh;
+  right: 12vw;
+}
+
+.ciyun{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.articlelist{
+  position: absolute;
+  top: 105vh;
+
+}
+
+#p1img{
+  position: absolute;
+  top: 14vh;
+  right: 12vw;
+}

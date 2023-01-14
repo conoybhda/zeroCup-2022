@@ -1,0 +1,104 @@
+@font-face {
+    font-family: "Olympics";
+    src: url("../fonts/锐字奥运精神夺冠简免费.ttf");
+}
+
+#page3{
+    position: relative;
+}
+
+.heroes{
+    width: 80vw;
+    height: 95vh;
+    position: absolute;
+    margin: auto;
+    right: 10vw;
+}
+
+.hero{
+    background-color: white;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    width: 80%;
+    margin: 100px 100px 100px 100px;
+    position: absolute;
+    top: 5vh;
+    transition: 0.3;
+    display: flex;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.hero:hover{
+    transform: scale(1.05);
+}
+
+.herotext{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 90%;
+    color: black;
+}
+
+.heroname{
+    text-align: center;
+    font-family: 'Olympics';
+    font-size: 98px;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    letter-spacing: 20px;
+    color: black;
+}
+
+.herostory{
+    font-family: 'Olympics';
+    font-size: 24px;
+    text-indent: 48px;
+    top: 100px;
+    line-height: 40px;
+    position: relative;
+    width: 90%;
+    left: 30px;
+    color: black;
+}
+
+#lefthero{
+    opacity: 0.9;
+    z-index: 1;
+    transform: perspective(600px) translateZ(-200px) translateX(-400px);
+}
+
+#middlehero{
+    opacity: 1;
+    z-index: 2;
+}
+
+#righthero{
+    opacity: 0.9;
+    z-index: 1;
+    transform: perspective(600px) translateZ(-200px) translateX(400px);
+}
+
+.leftarrow{
+    left: 2vw;
+    top: 350px;
+    position: absolute;
+    transition: 0.2s;
+    z-index: 100;
+}
+
+.leftarrow:hover,.rightarrow:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.rightarrow{
+    right: 8vw;
+    top: 350px;
+    position: absolute;
+    transition: 0.2s;
+    z-index: 100;
+}

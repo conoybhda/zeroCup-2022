@@ -1,0 +1,31 @@
+:root{
+    --scale: 1.2;
+    --x: 0;
+    --y: 0;
+}
+#page6{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.conclude{
+    width: 70vw;
+    height: 30vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw 0;
+}
+.page6pic{
+    width: 80%;
+    transform: translateX(var(--x)) translateY(var(--y)) scale(var(--scale));
+    transition: ease-out 2s;
+    filter: brightness(500%);
+}
+.conclusion{
+    color: white;
+}
